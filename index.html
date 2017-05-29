@@ -23,10 +23,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home" onclick = "loadHome()">Home</a></li>
+                <li><a href="#news" onclick = "loadNews()">News</a></li>
+                <li><a href="#contact" onclick = "loadContact()">Contact</a></li>
+                <li><a href="#about" onclick = "loadAbout()">About</a></li>
                 <li><a href="res/snake.html">Lit Stuff</a></li>
             </ul>
         </nav>
@@ -36,7 +36,7 @@
         <section id = "mainSection">
             <div class = "content">
                 <br>
-                <p>
+                <p id = "maintext">
                     This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.
                 </p>
                 <div class = "blank">
@@ -65,6 +65,22 @@
             
             function alertFunction() {
                 alert("In Latin, Faust is defined as fortune.");
+            }
+            
+            function loadHome() {
+                document.getElementById("maintext").textContent = "This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.";
+            }
+            
+            function loadNews() {
+                document.getElementById("maintext").textContent = "Really?";
+            }
+            
+            function loadContact() {
+                document.getElementById("maintext").textContent = "Get a life";
+            }
+            
+            function loadAbout() {
+                document.getElementById("maintext").textContent = "Not much";
             }
             
             function dropdown() {
