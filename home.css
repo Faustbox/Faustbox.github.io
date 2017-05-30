@@ -8,8 +8,20 @@ body {
 }
 
 p {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+strong {
+    font-size: 20;
+    color: #347cef;
 }
           
 .clearb {
@@ -20,6 +32,11 @@ p {
     background-color: powderblue;
     overflow: auto;
     padding-top: 2em;
+}
+
+#maintext {
+    margin-left: 2em;
+    margin-right: 2em;
 }
            
 #logo {
@@ -62,6 +79,33 @@ nav ul li a:hover {
     background-color: #a5a2db;
 }
 
+.aboutTeam {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.aboutGrid {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.aboutGrid ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aboutGrid ul li {
+    display: block;
+    height: 3em;
+    line-height: 2em;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    font-family: contentFont;
+}
+
+
 #mainSection {
     background-color: steelblue;
     width: 100%;
@@ -72,6 +116,10 @@ nav ul li a:hover {
     width: 90%;
     margin-left: 5%;
     border-radius: 2px;
+}
+
+.aboutHeaderClass {
+    font-size: 24;
 }
 
 .founders {
@@ -154,6 +202,11 @@ nav ul li a:hover {
     src: url(res/Don1.ttf);
 }
 
+@font-face {
+    font-family: contentFont;
+    src: url(res/SCPEL.ttf);
+}
+
 /*
 -7 inch tablets
 -This CSS will apply for devices with the minimum width of 480 pixels
@@ -162,6 +215,11 @@ nav ul li a:hover {
     
     nav ul li {
         width: 20%;
+        float: left;
+    }
+    
+    .aboutGrid ul li {
+        width: 50%;
         float: left;
     }
 }
@@ -179,5 +237,8 @@ nav ul li a:hover {
 */
 @media only screen and (min-width: 1140px) {
     nav ul{
+    }
+    
+    .aboutGrid ul{
     }
 }

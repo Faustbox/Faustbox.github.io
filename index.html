@@ -36,15 +36,39 @@
         <section id = "mainSection">
             <div class = "content">
                 <br>
-                <p id = "maintext">
-                    This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.
-                </p>
+                <center><img id = "aboutLogo" src = "res/pagelogo2.png" width = "90" height = "90" style = "display: none;"></center>
+                <center>
+                    <p id = "maintext">
+                        This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.
+                    </p>
+                </center>
+                <div class = "aboutGrid" id = "aboutGridID" style = "display: none;">
+                    <ul>
+                        <li><span style = "font-size: 25; color:#000000; font-family:Calibri">Team</span>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Oscar Wong</strong>
+                            <br>
+                            CEO and CFO
+                        </li>
+                        <li>
+                            <strong>Aahil Mehta</strong>
+                            <br>
+                            CEO and CTO
+                        </li>
+                    </ul>
+                </div>
+                
                 <div class = "blank">
                 </div>
             </div>
             <div class = "founders">
                 <center>
-                    Founded by Oscar Wong and Aahil Mehta © 2017-2018
+                    Founded by Oscar Wong and Aahil Mehta © 2017
                 </center>
             </div>
             <center>
@@ -68,19 +92,31 @@
             }
             
             function loadHome() {
+                document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.";
+                document.getElementById("aboutGridID").style = "display: none;";
+                document.getElementById("additionaltext1").innerHTML = "";
             }
             
             function loadNews() {
+                document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "Really?";
+                document.getElementById("aboutGridID").style = "display: none;";
+                document.getElementById("additionaltext1").innerHTML = "";
             }
             
             function loadContact() {
+                document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "Get a life";
+                document.getElementById("aboutGridID").style = "display: none;";
+                document.getElementById("additionaltext1").innerHTML = "";
             }
             
             function loadAbout() {
-                document.getElementById("maintext").textContent = "Not much";
+                document.getElementById("aboutLogo").style = "display: block;";
+                document.getElementById("maintext").innerHTML = "<br>Founded by Oscar Wong and Aahil Mehta in 2017 in the miniscule town of Tiverton. The aim of Faustbox is to create a community where people from different parts of the world can share information and data of any form with one another.<hr>";
+                document.getElementById("aboutGridID").style = "display: block;";
+                document.getElementById("additionaltext1").innerHTML = "HEllo ";
             }
             
             function dropdown() {
