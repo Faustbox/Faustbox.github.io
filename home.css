@@ -8,8 +8,8 @@ body {
 }
 
 p {
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 hr {
@@ -202,7 +202,6 @@ nav ul li a:hover {
 -This CSS will apply for devices with the minimum width of 480 pixels
 */
 @media only screen and (min-width: 480px) {
-    
     nav ul li {
         width: 20%;
         float: left;
