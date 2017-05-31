@@ -8,20 +8,15 @@ body {
 }
 
 p {
-    margin-left: 0em;
-    margin-right: 0em;
+    margin-left: 4em;
+    margin-right: 4em;
 }
 
 hr {
     margin-top: 2em;
     margin-bottom: 2em;
-    margin-left: 10em;
-    margin-right: 10em;
-}
-
-strong {
-    font-size: 20;
-    color: #347cef;
+    margin-left: 10%;
+    margin-right: 10%;
 }
           
 .clearb {
@@ -35,8 +30,6 @@ strong {
 }
 
 #maintext {
-    margin-left: 2em;
-    margin-right: 2em;
 }
            
 #logo {
@@ -79,30 +72,27 @@ nav ul li a:hover {
     background-color: #a5a2db;
 }
 
-.aboutTeam {
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
 .aboutGrid {
     float: left;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    height: 3em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .aboutGrid ul {
     list-style-type: none;
-    padding: 0;
+    width: 100%;
 }
 
 .aboutGrid ul li {
     display: block;
-    height: 3em;
-    line-height: 2em;
     text-align: left;
     text-decoration: none;
-    width: 100%;
+    width: 50%;
     font-family: contentFont;
+    float: left;
+    padding-top: 1%;
 }
 
 
@@ -215,11 +205,6 @@ nav ul li a:hover {
     
     nav ul li {
         width: 20%;
-        float: left;
-    }
-    
-    .aboutGrid ul li {
-        width: 50%;
         float: left;
     }
 }

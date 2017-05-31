@@ -37,28 +37,23 @@
             <div class = "content">
                 <br>
                 <center><img id = "aboutLogo" src = "res/pagelogo2.png" width = "90" height = "90" style = "display: none;"></center>
-                <center>
-                    <p id = "maintext">
-                        This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.
-                    </p>
-                </center>
-                <div class = "aboutGrid" id = "aboutGridID" style = "display: none;">
-                    <ul>
-                        <li><span style = "font-size: 25; color:#000000; font-family:Calibri">Team</span>
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
+                <p id = "maintext">
+                    This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.
+                </p>
+                <div class = "aboutGrid" id = "aboutID" style = "display: none;">
+                    <span style = "font-size: 25;">Team</span>
                     <ul>
                         <li>
-                            <strong>Oscar Wong</strong>
-                            <br>
-                            CEO and CFO
+                            <span style = "font-size: 20; color: #347cef;">Oscar Wong</span>
                         </li>
                         <li>
-                            <strong>Aahil Mehta</strong>
-                            <br>
-                            CEO and CTO
+                            <span style = "font-size: 20; color: #347cef;">Aahil Mehta</span>
+                        </li>
+                        <li>
+                            <span style = "font-size: 16; color: black;">CEO and CFO</span>
+                        </li>
+                        <li>
+                            <span style = "font-size: 16; color: black;">CEO and CTO</span>
                         </li>
                     </ul>
                 </div>
@@ -94,29 +89,25 @@
             function loadHome() {
                 document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "This website is still in the process of developement, however, in the case of extreme boredom you may head over to the Lit Stuff tab.";
-                document.getElementById("aboutGridID").style = "display: none;";
-                document.getElementById("additionaltext1").innerHTML = "";
+                document.getElementById("aboutID").style = "display: none";
             }
             
             function loadNews() {
                 document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "Really?";
-                document.getElementById("aboutGridID").style = "display: none;";
-                document.getElementById("additionaltext1").innerHTML = "";
+                document.getElementById("aboutID").style = "display: none";
             }
             
             function loadContact() {
                 document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("maintext").textContent = "Get a life";
-                document.getElementById("aboutGridID").style = "display: none;";
-                document.getElementById("additionaltext1").innerHTML = "";
+                document.getElementById("aboutID").style = "display: none";
             }
             
             function loadAbout() {
                 document.getElementById("aboutLogo").style = "display: block;";
                 document.getElementById("maintext").innerHTML = "<br>Founded by Oscar Wong and Aahil Mehta in 2017 in the miniscule town of Tiverton. The aim of Faustbox is to create a community where people from different parts of the world can share information and data of any form with one another.<hr>";
-                document.getElementById("aboutGridID").style = "display: block;";
-                document.getElementById("additionaltext1").innerHTML = "HEllo ";
+                document.getElementById("aboutID").style = "display: block";
             }
             
             function dropdown() {
