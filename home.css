@@ -12,6 +12,12 @@ p {
     margin-right: 5%;
 }
 
+iframe {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
 hr {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -70,6 +76,17 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #a5a2db;
+}
+
+.bitIframe {
+    position: static;
+    visibility: visible;
+    display: block;
+    height: 250px;
+    padding: 0px;
+    border: 1px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 .aboutGrid {
@@ -202,9 +219,8 @@ nav ul li a:hover {
 -This CSS will apply for devices with the minimum width of 480 pixels
 */
 @media only screen and (min-width: 480px) {
-    nav ul li {
-        width: 20%;
-        float: left;
+    .bitIframe {
+        height: 500px;
     }
 }
           
@@ -213,6 +229,10 @@ nav ul li a:hover {
 -This CSS will apply for devices with the minimum width of 768 pixels
 */
 @media only screen and (min-width: 768px) {
+    nav ul li {
+        width: 20%;
+        float: left;
+    }
 }
           
 /*

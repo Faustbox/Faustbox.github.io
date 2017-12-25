@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="#home" onclick = "loadHome()">Home</a></li>
                 <li><a href="#news" onclick = "loadNews()">News</a></li>
-                <li><a href="#contact" onclick = "loadContact()">Contact</a></li>
+                <li><a href="#table" onclick = "loadTable()">League Table</a></li>
                 <li><a href="#about" onclick = "loadAbout()">About</a></li>
                 <li><a href="res/snake.html">Lit Stuff</a></li>
             </ul>
@@ -41,6 +41,9 @@
                 <p id = "maintext">
                     This website is currently under maintainence. In the case of extreme boredom you may head over to the Lit Stuff tab.
                 </p>
+                <iframe id = "bitStats" class = "bitIframe" scrolling="no" allowtransparency="true" style = "display: none;" 
+                        src="https://charts.bitcoin.com/embed/price">
+                </iframe>
                 <div class = "aboutGrid" id = "aboutID" style = "display: none;">
                     <span style = "font-size: 25;">Team</span>
                     <ul>
@@ -89,24 +92,28 @@
             
             function loadHome() {
                 document.getElementById("aboutLogo").style = "display: none;";
+                document.getElementById("bitStats").style = "display: none;";
                 document.getElementById("maintext").textContent = "This website is currently under maintainence. In the case of extreme boredom you may head over to the Lit Stuff tab.";
                 document.getElementById("aboutID").style = "display: none";
             }
             
             function loadNews() {
                 document.getElementById("aboutLogo").style = "display: none;";
+                document.getElementById("bitStats").style = "display: none;";
                 document.getElementById("maintext").textContent = "Really?";
                 document.getElementById("aboutID").style = "display: none";
             }
             
-            function loadContact() {
+            function loadTable() {
                 document.getElementById("aboutLogo").style = "display: none;";
-                document.getElementById("maintext").textContent = "Get a life";
+                document.getElementById("bitStats").style = "display: block;";
+                document.getElementById("maintext").textContent = "Currently under maintainence. Will feature a league table of the most trending cryptocurrencies and assets sorted by their individual market caps.";
                 document.getElementById("aboutID").style = "display: none";
             }
             
             function loadAbout() {
                 document.getElementById("aboutLogo").style = "display: block;";
+                document.getElementById("bitStats").style = "display: none;";
                 document.getElementById("maintext").innerHTML = "<br>Founded by Oscar Wong and Aahil Mehta in 2017 in the miniscule town of Tiverton. The aim of Faustbox is to create a community where people from different parts of the world can share all sorts of information about cryptocurrencies with one another.<hr>";
                 document.getElementById("aboutID").style = "display: block";
             }
