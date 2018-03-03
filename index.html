@@ -7,6 +7,7 @@
         <title>
             Faust Box
         </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
@@ -42,8 +43,23 @@
                 <p id = "maintext">
                     This website is currently under maintainence. In the case of extreme boredom you may head over to the Lit Stuff tab.
                 </p>
-                <div id = "bitStats" class = "leaguetable">
-                    
+                <div id = "bitStats" style = "visibility: hidden; overflow-x:auto;" class = "leaguetable">
+                    <table class="table-fill">
+                        <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th class="text-center">Symbol</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Market Cap</th>
+                                <th class="text-center">% 1h</th>
+                                <th class="text-center">% 1d</th>
+                                <th class="text-center">% 7d</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                        </tbody>
+                    </table>
                 </div>
                 <div class = "aboutGrid" id = "aboutID" style = "display: none;">
                     <span style = "font-size: 25;">Team</span>
@@ -108,7 +124,7 @@
             function loadTable() {
                 document.getElementById("aboutLogo").style = "display: none;";
                 document.getElementById("bitStats").style = "display: block;";
-                document.getElementById("maintext").textContent = "Currently under maintainence. Will feature a league table of the most trending cryptocurrencies and assets sorted by their individual market caps.";
+                document.getElementById("maintext").textContent = "";
                 document.getElementById("aboutID").style = "display: none";
             }
             
@@ -122,6 +138,17 @@
             function dropdown() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
+        </script>
+        
+        <script>
+            $.getJSON("https://api.coinmarketcap.com/v1/ticker/", function (data) {
+                var items = [];
+                $.each(data, function (index, object) {
+                    items.push("<tr><td>" + data[index].rank + "</td><td>" + data[index].symbol + "</td><td>" + data[index].name + "</td><td>" + "$" +                                  data[index].price_usd + "</td><td>" + "$" + data[index].market_cap_usd + "</td><td>" + data[index].percent_change_1h  + "%" + "</td><td>" +                         data[index].percent_change_24h  + "%" + "</td><td>" + data[index].percent_change_7d  + "%"  + "</td></tr>");
+                });
+                var tabledata = items.join("");
+                $(tabledata).appendTo("table");
+            });
         </script>
     </body>
 </html>
