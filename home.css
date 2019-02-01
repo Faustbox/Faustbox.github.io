@@ -56,7 +56,7 @@ nav ul li {
 }
  
 nav ul li a {
-    background-color : lightsteelblue;
+    background-color : lightslategray;
     <!-- border: thin solid ghostwhite; -->
     font-family: tabFont;
     display: block;
